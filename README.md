@@ -55,3 +55,27 @@ DesignPatterns.Creational/
 │ │ │ └── WindowsCheckbox.cs
 </code></pre>
 
+---
+
+## Usage
+
+A console application project (`DesignPatterns.Demo`) references this library and provides an interactive demonstration:
+
+- Demonstrates the Singleton pattern with a global instance.
+- Prompts for vehicle type to demonstrate Factory Method.
+- Prompts for UI platform to demonstrate Abstract Factory.
+
+---
+
+## How to Run Demo
+
+1. Clone the repository.
+2. Build the solution.
+3. Run the `DesignPatterns.Demo` console project.
+4. Follow the interactive prompts in the console.
+
+---
+
+## Contribution
+
+Contributions are welcome! Feel free to open issues or submit pull requests to improve or add new patterns.
