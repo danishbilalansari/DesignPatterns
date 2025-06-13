@@ -21,8 +21,6 @@ Creational design patterns deal with **object creation mechanisms**, aiming to c
 
 This repository contains implementations of several core creational design patterns in C#, including:
 
----
-
 ## Implemented Patterns
 
 ### Singleton
@@ -38,8 +36,6 @@ This repository contains implementations of several core creational design patte
 ### Abstract Factory
 - Provides an interface to create families of related or dependent objects without specifying their concrete classes.
 - Used here to create platform-specific UI elements like buttons and checkboxes for Windows and Mac.
-
----
 
 ## Project Structure
 
@@ -70,8 +66,6 @@ DesignPatterns.Creational/
 │ │ │ └── WindowsCheckbox.cs
 </code></pre>
 
----
-
 ## Usage
 
 A console application project (`DesignPatterns.Demo`) references this library and provides an interactive demonstration:
@@ -80,17 +74,9 @@ A console application project (`DesignPatterns.Demo`) references this library an
 - Prompts for vehicle type to demonstrate Factory Method.
 - Prompts for UI platform to demonstrate Abstract Factory.
 
----
-
 ## How to Run Demo
 
 1. Clone the repository.
 2. Build the solution.
 3. Run the `DesignPatterns.Demo` console project.
 4. Follow the interactive prompts in the console.
-
----
-
-## Contribution
-
-Contributions are welcome! Feel free to open issues or submit pull requests to improve or add new patterns.
