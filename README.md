@@ -13,6 +13,8 @@ Design patterns are reusable solutions to common problems in software design. Th
 # Types of Design Patterns
 Design patterns are broadly classified into three categories based on their purpose:
 
+![image alt](https://github.com/danishbilalansari/DesignPatterns/blob/c2c3de905127f8113f8d69c72b95bc64ea01a76d/DesignPatterns.png)
+
 ## Creational Design Patterns
 
 Creational design patterns deal with **object creation mechanisms**, aiming to create objects in a manner suitable to the situation. They help make a system independent of how its objects are created, composed, and represented, promoting **flexibility and reuse**.
