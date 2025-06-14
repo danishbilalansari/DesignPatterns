@@ -2,6 +2,8 @@
 using DesignPatterns.Creational.FactoryMethod.Interfaces;
 using DesignPatterns.Creational.FactoryMethod;
 using DesignPatterns.Creational.Singleton;
+using DesignPatterns.Creational.Builder.Builders;
+using DesignPatterns.Creational.Builder.Models;
 
 // Singleton Pattern
 Console.WriteLine("Singleton Pattern");
@@ -48,6 +50,19 @@ var checkbox = guiFactory.CreateCheckbox();
 
 button.Paint();
 checkbox.Paint();
+
+
+// Builder Pattern
+Console.WriteLine("\nBuilder Pattern");
+CarBuilder builder = new SportsCarBuilder();
+Car car = builder.CreateNewCar()
+                 .BuildEngine()
+                 .BuildWheels()
+                 .BuildDoors()
+                 .BuildColor()
+                 .Build();
+
+car.ShowDetails();
 
 Console.WriteLine("\nDemo complete. Press any key to exit...");
 Console.ReadKey();
