@@ -77,6 +77,7 @@ DesignPatterns.Creational/
 
 </code></pre>
 
+<!--
 ## Usage
 
 A console application project (`DesignPatterns.Demo`) references this library and provides an interactive demonstration:
@@ -84,6 +85,7 @@ A console application project (`DesignPatterns.Demo`) references this library an
 - Demonstrates the Singleton pattern with a global instance.
 - Prompts for vehicle type to demonstrate Factory Method.
 - Prompts for UI platform to demonstrate Abstract Factory.
+-->
 
 ## How to Run Demo
 
