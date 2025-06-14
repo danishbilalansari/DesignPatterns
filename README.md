@@ -68,6 +68,13 @@ DesignPatterns.Creational/
 │ │ │ ├── ICheckbox.cs
 │ │ │ ├── MacCheckbox.cs
 │ │ │ └── WindowsCheckbox.cs
+├── Builder/
+│ ├── Builders/
+│ │ ├── CarBuilder.cs
+│ │ └── SportsBuilder.cs
+│ ├── Models/
+│ │ └── Car.cs
+
 </code></pre>
 
 ## Usage
