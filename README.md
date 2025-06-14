@@ -37,6 +37,10 @@ This repository contains implementations of several core creational design patte
 - Provides an interface to create families of related or dependent objects without specifying their concrete classes.
 - Used here to create platform-specific UI elements like buttons and checkboxes for Windows and Mac.
 
+### Builder
+- Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
+- Useful when building complex objects with many possible configurations.
+
 ## Project Structure
 
 <pre lang="text"><code>
