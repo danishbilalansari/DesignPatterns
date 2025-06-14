@@ -23,16 +23,6 @@ This repository contains implementations of several core creational design patte
 
 ## Implemented Patterns
 
-### Singleton
-- Ensures a class has only one instance and provides a global point of access to it.
-- Thread-safe and lazily initialized.
-- Useful for shared resources like configuration or logging.
-
-### Factory Method
-- Defines an interface for creating an object but lets subclasses decide which class to instantiate.
-- Decouples client code from concrete implementations.
-- Example: A `VehicleFactory` creating `Car` or `Bike` objects based on input.
-
 ### Abstract Factory
 - Provides an interface to create families of related or dependent objects without specifying their concrete classes.
 - Used here to create platform-specific UI elements like buttons and checkboxes for Windows and Mac.
@@ -41,19 +31,25 @@ This repository contains implementations of several core creational design patte
 - Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
 - Useful when building complex objects with many possible configurations.
 
+### Factory Method
+- Defines an interface for creating an object but lets subclasses decide which class to instantiate.
+- Decouples client code from concrete implementations.
+- Example: A `VehicleFactory` creating `Car` or `Bike` objects based on input.
+
+### Prototype
+- Creates new objects by copying an existing object (prototype) rather than constructing new instances from scratch.
+- The prototype interface defines the Clone method, and concrete prototypes implement the cloning logic.
+- Useful when object creation is expensive, and you need to replicate objects efficiently.
+
+### Singleton
+- Ensures a class has only one instance and provides a global point of access to it.
+- Thread-safe and lazily initialized.
+- Useful for shared resources like configuration or logging.
+
 ## Project Structure
 
 <pre lang="text"><code>
 DesignPatterns.Creational/
-├── Singleton/
-│ └── Singleton.cs
-├── FactoryMethod/
-│ ├── Interfaces/
-│ │ └── IVehicle.cs
-│ ├── Implementation/
-│ │ ├── Car.cs
-│ │ └── Bike.cs
-│ └── VehicleFactory.cs
 ├── AbstractFactory/
 │ ├── Factories/
 │ │ ├── IGUIFactory.cs
@@ -74,7 +70,21 @@ DesignPatterns.Creational/
 │ │ └── SportsBuilder.cs
 │ ├── Models/
 │ │ └── Car.cs
-
+├── FactoryMethod/
+│ ├── Interfaces/
+│ │ └── IVehicle.cs
+│ ├── Implementation/
+│ │ ├── Car.cs
+│ │ └── Bike.cs
+│ └── VehicleFactory.cs
+├── Prototype/
+│ ├── Clients/
+│ │ └── Client.cs
+│ ├── Models/
+│ │ ├── ConcreteProduct.cs
+│ │ └── Product.cs
+├── Singleton/
+│ └── Singleton.cs
 </code></pre>
 
 <!--
