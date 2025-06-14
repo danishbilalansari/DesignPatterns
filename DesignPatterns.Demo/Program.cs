@@ -4,6 +4,8 @@ using DesignPatterns.Creational.FactoryMethod;
 using DesignPatterns.Creational.Singleton;
 using DesignPatterns.Creational.Builder.Builders;
 using DesignPatterns.Creational.Builder.Models;
+using DesignPatterns.Creational.Prototype.Clients;
+using DesignPatterns.Creational.Prototype.Models;
 
 // Singleton Pattern
 Console.WriteLine("Singleton Pattern");
@@ -63,6 +65,27 @@ Car car = builder.CreateNewCar()
                  .Build();
 
 car.ShowDetails();
+
+
+// Prototype Pattern
+Console.WriteLine("\nPrototype Pattern");
+
+// Create a new ConcreteProduct prototype
+Product product1 = new ConcreteProduct("Laptop", "Electronics");
+
+// Set additional properties if needed
+Console.WriteLine("Original Product:");
+product1.ShowDetails();
+((ConcreteProduct)product1).ShowCategory();
+
+// Create a client that will clone the product
+Client client = new Client(product1);
+
+// Clone the product
+Product clonedProduct = client.GetClone();
+Console.WriteLine("\nCloned Product:");
+clonedProduct.ShowDetails();
+((ConcreteProduct)clonedProduct).ShowCategory();
 
 Console.WriteLine("\nDemo complete. Press any key to exit...");
 Console.ReadKey();
