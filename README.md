@@ -1,4 +1,4 @@
-# Design Patterns using .Net 8
+# Design Patterns (.Net 8)
 
 Design patterns are reusable solutions to common problems in software design. They represent best practices used to solve general design issues in a structured and efficient way. Design patterns are not ready-made code but templates that guide how to structure classes and objects to solve a problem.
 
