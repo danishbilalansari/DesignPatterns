@@ -46,6 +46,49 @@ This repository contains implementations of several core creational design patte
 - Thread-safe and lazily initialized.
 - Useful for shared resources like configuration or logging.
 
+## Structural Design Patterns
+
+Structural design patterns focus on how classes and objects are composed to form larger structures, while keeping the system flexible and efficient. These patterns help ensure parts of a system can work together smoothly even as individual components evolve independently.
+
+This repository contains implementations of several core structural design patterns in C#, including:
+
+## Implemented Patterns
+
+### Adapter
+- Converts the interface of a class into another interface clients expect.
+- Allows incompatible interfaces to work together without changing their source code.
+- Example: A `LoggerAdapter` allows integration of an `OldLogger` into a modern logging interface.
+
+### Bridge
+- Decouples an abstraction from its implementation so the two can vary independently.
+- Useful when both the abstraction and its implementation are expected to change frequently.
+- Example: A `Circle` shape can be rendered using different strategies like `VectorRenderer` or `RasterRenderer`.
+
+### Composite
+- Composes objects into tree structures to represent part-whole hierarchies.
+- Allows clients to treat individual objects and groups of objects uniformly.
+- Example: A `Folder` can contain both `File` objects and other `Folder` objects, enabling recursive operations.
+
+### Decorator
+- Attaches additional responsibilities to an object dynamically.
+- Provides a flexible alternative to subclassing for extending behavior.
+- Example: A `EmailNotifier` can be decorated with an `SMSDecorator` to send both email and SMS notifications.
+
+### Facade
+- Provides a simplified, unified interface to a set of interfaces in a subsystem.
+- Helps reduce complexity and dependencies in client code.
+- Example: A `MediaFacade` abstracts the use of `AudioSystem` and `VideoSystem` into a single `PlayMedia()` method.
+
+### Flyweight
+- Reduces memory usage by sharing common parts of objects that are repeated multiple times.
+- Useful when dealing with a large number of similar objects.
+- Example: A `CharacterFactory` ensures characters like 'A' or 'B' are shared rather than created anew every time.
+
+### Proxy
+- Provides a surrogate or placeholder for another object to control access to it.
+- Can add lazy loading, access control, logging, and more.
+- Example: An `ImageProxy` defers loading of a `RealImage` until the image is actually needed.
+
 ## Project Structure
 
 <pre lang="text"><code>
