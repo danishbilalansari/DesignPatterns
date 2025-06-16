@@ -1,11 +1,25 @@
 ﻿using DesignPatterns.Creational.AbstractFactory.Factories;
-using DesignPatterns.Creational.FactoryMethod.Interfaces;
-using DesignPatterns.Creational.FactoryMethod;
-using DesignPatterns.Creational.Singleton;
 using DesignPatterns.Creational.Builder.Builders;
 using DesignPatterns.Creational.Builder.Models;
+using DesignPatterns.Creational.FactoryMethod;
+using DesignPatterns.Creational.FactoryMethod.Interfaces;
 using DesignPatterns.Creational.Prototype.Clients;
 using DesignPatterns.Creational.Prototype.Models;
+using DesignPatterns.Creational.Singleton;
+using DesignPatterns.Structural.Adadpter.Adapters;
+using DesignPatterns.Structural.Adadpter.Interfaces;
+using DesignPatterns.Structural.Bridge.Abstractions;
+using DesignPatterns.Structural.Bridge.Implementations;
+using DesignPatterns.Structural.Composite.Composite;
+using DesignPatterns.Structural.Decorator.Components;
+using DesignPatterns.Structural.Decorator.ConcreteComponents;
+using DesignPatterns.Structural.Decorator.Decorators;
+using DesignPatterns.Structural.Facade.Facade;
+using DesignPatterns.Structural.Flyweight.Factory;
+using DesignPatterns.Structural.Flyweight.Flyweights;
+using DesignPatterns.Structural.Proxy.Interfaces;
+using DesignPatterns.Structural.Proxy.Proxy;
+using LeafFile = DesignPatterns.Structural.Composite.Leaf.File;
 
 // Singleton Pattern
 Console.WriteLine("Singleton Pattern");
@@ -34,7 +48,7 @@ catch (Exception ex)
 }
 
 
-// Abstract Factory Method
+// Abstract Factory Pattern
 Console.WriteLine("\nAbstract Factory Pattern");
 
 Console.WriteLine("Enter UI platform (windows/mac):");
@@ -69,23 +83,74 @@ car.ShowDetails();
 
 // Prototype Pattern
 Console.WriteLine("\nPrototype Pattern");
-
-// Create a new ConcreteProduct prototype
 Product product1 = new ConcreteProduct("Laptop", "Electronics");
-
-// Set additional properties if needed
 Console.WriteLine("Original Product:");
 product1.ShowDetails();
 ((ConcreteProduct)product1).ShowCategory();
-
-// Create a client that will clone the product
 Client client = new Client(product1);
-
-// Clone the product
 Product clonedProduct = client.GetClone();
-Console.WriteLine("\nCloned Product:");
+Console.WriteLine("Cloned Product:");
 clonedProduct.ShowDetails();
 ((ConcreteProduct)clonedProduct).ShowCategory();
+
+
+// Adapter Pattern
+Console.WriteLine("\nAdapter Pattern:");
+INewLogger logger = new LoggerAdapter();
+logger.Log("Adapter Pattern in action!");
+
+
+// Decorator Pattern
+Console.WriteLine("\nDecorator Pattern:");
+INotifier notifier = new EmailNotifier();
+notifier = new SMSDecorator(notifier);
+notifier.Send("You have a new notification");
+
+
+// Composite Pattern
+Console.WriteLine("\nComposite Pattern:");
+var root = new Folder("Root");
+root.Add(new LeafFile("File1.txt"));
+root.Add(new LeafFile("File2.txt"));
+var sub = new Folder("SubFolder");
+sub.Add(new LeafFile("File3.txt"));
+root.Add(sub);
+root.Display(1);
+
+
+// Facade Pattern
+Console.WriteLine("\nFacade Pattern:");
+var mediaFacade = new MediaFacade();
+mediaFacade.PlayMedia();
+
+
+// Flyweight Pattern
+Console.WriteLine("\nFlyweight Pattern:");
+var factory = new CharacterFactory();
+string document = "AABBBCCDA";
+foreach (char c in document)
+{
+    Character character = factory.GetCharacter(c);
+    character.Display();
+}
+
+
+// Proxy Pattern
+Console.WriteLine("\nProxy Pattern:");
+IImage image = new ImageProxy("example.jpg");
+image.Display();
+image.Display();
+
+
+// Bridge Pattern
+Console.WriteLine("\nBridge Pattern:");
+IRenderer vectorRenderer = new VectorRenderer();
+IRenderer rasterRenderer = new RasterRenderer();
+Shape vectorCircle = new Circle(vectorRenderer, 5);
+Shape rasterCircle = new Circle(rasterRenderer, 10);
+vectorCircle.Draw();
+rasterCircle.Draw();
+
 
 Console.WriteLine("\nDemo complete. Press any key to exit...");
 Console.ReadKey();
