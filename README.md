@@ -127,7 +127,7 @@ DesignPatterns.Structural/
 │  │  └── Character.cs
 │  ├── Factory/
 │  │  └── CharacterFactory.cs
-└── Proxy/
+├── Proxy/
 │  ├── Interfaces/
 │  │  └── IImage.cs
 │  ├── RealSubject/
@@ -135,7 +135,7 @@ DesignPatterns.Structural/
 │  ├── Proxy/
 │  │  └── ImageProxy.cs
 │
-├──DesignPatterns.Demo/
+DesignPatterns.Demo/
 │  └── Program.cs
 </code></pre>
 
