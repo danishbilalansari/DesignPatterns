@@ -51,40 +51,92 @@ This repository contains implementations of several core creational design patte
 <pre lang="text"><code>
 DesignPatterns.Creational/
 ├── AbstractFactory/
-│ ├── Factories/
-│ │ ├── IGUIFactory.cs
-│ │ ├── MacFactory.cs
-│ │ └── WindowsFactory.cs
-│ ├── Products/  
-│ │ ├── Buttons/
-│ │ │ ├── IButton.cs
-│ │ │ ├── MacButton.cs
-│ │ │ └── WindowsCheckbox.cs
-│ │ ├── Checkboxes/
-│ │ │ ├── ICheckbox.cs
-│ │ │ ├── MacCheckbox.cs
-│ │ │ └── WindowsCheckbox.cs
+│  ├── Factories/
+│  │  ├── IGUIFactory.cs
+│  │  ├── MacFactory.cs
+│  │  └── WindowsFactory.cs
+│  ├── Products/  
+│  │  ├── Buttons/
+│  │  │  ├── IButton.cs
+│  │  │  ├── MacButton.cs
+│  │  │  └── WindowsCheckbox.cs
+│  │  ├── Checkboxes/
+│  │  │  ├── ICheckbox.cs
+│  │  │  ├── MacCheckbox.cs
+│  │  │  └── WindowsCheckbox.cs
 ├── Builder/
-│ ├── Builders/
-│ │ ├── CarBuilder.cs
-│ │ └── SportsBuilder.cs
-│ ├── Models/
-│ │ └── Car.cs
+│  ├── Builders/
+│  │  ├── CarBuilder.cs
+│  │  └── SportsBuilder.cs
+│  ├── Models/
+│  │  └── Car.cs
 ├── FactoryMethod/
-│ ├── Interfaces/
-│ │ └── IVehicle.cs
-│ ├── Implementation/
-│ │ ├── Car.cs
-│ │ └── Bike.cs
-│ └── VehicleFactory.cs
+│  ├── Interfaces/
+│  │  └── IVehicle.cs
+│  ├── Implementation/
+│  │  ├── Car.cs
+│  │  └── Bike.cs
+│  └── VehicleFactory.cs
 ├── Prototype/
-│ ├── Clients/
-│ │ └── Client.cs
-│ ├── Models/
-│ │ ├── ConcreteProduct.cs
-│ │ └── Product.cs
+│  ├── Clients/
+│  │  └── Client.cs
+│  ├── Models/
+│  │  ├── ConcreteProduct.cs
+│  │  └── Product.cs
 ├── Singleton/
-│ └── Singleton.cs
+│  └── Singleton.cs
+│
+DesignPatterns.Structural/
+├── AdapterPattern/
+│  ├── Interfaces/
+│  │  └── INewLogger.cs
+│  ├── Legacy/
+│  │  └── OldLogger.cs
+│  └── Adapters/
+│      └── LoggerAdapter.cs
+├── BridgePattern/
+│  ├── Abstractions/
+│  │  ├── Shape.cs
+│  │  └── Circle.cs
+│  └── Implementations/
+│      ├── IRenderer.cs
+│      ├── VectorRenderer.cs
+│      └── RasterRenderer.cs
+├── CompositePattern/
+│  ├── Interfaces/
+│  │  └── IComponent.cs
+│  ├── Leaf/
+│  │  └── File.cs
+│  └── Composite/
+│     └── Folder.cs
+├── DecoratorPattern/
+│  ├── Components/
+│  │  └── INotifier.cs
+│  ├── ConcreteComponents/
+│  │  └── EmailNotifier.cs
+│  └── Decorators/
+│      └── SMSDecorator.cs
+├── FacadePattern/
+│  ├── Subsystems/
+│  │  ├── AudioSystem.cs
+│  │  └── VideoSystem.cs
+│  └── Facade/
+│     └── MediaFacade.cs
+├── FlyweightPattern/
+│  ├── Flyweights/
+│  │  └── Character.cs
+│  └── Factory/
+│     └── CharacterFactory.cs
+└── ProxyPattern/
+│  ├── Interfaces/
+│  │  └── IImage.cs
+│  ├── RealSubject/
+│  │  └── RealImage.cs
+│  └── Proxy/
+│     └── ImageProxy.cs
+│
+├──DesignPatterns.Demo/
+│  └── Program.cs
 </code></pre>
 
 <!--
