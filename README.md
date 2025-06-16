@@ -87,53 +87,53 @@ DesignPatterns.Creational/
 │  └── Singleton.cs
 │
 DesignPatterns.Structural/
-├── AdapterPattern/
+├── Adapter/
 │  ├── Interfaces/
 │  │  └── INewLogger.cs
 │  ├── Legacy/
 │  │  └── OldLogger.cs
 │  └── Adapters/
-│      └── LoggerAdapter.cs
-├── BridgePattern/
+│  │  └── LoggerAdapter.cs
+├── Bridge/
 │  ├── Abstractions/
 │  │  ├── Shape.cs
 │  │  └── Circle.cs
 │  └── Implementations/
-│      ├── IRenderer.cs
-│      ├── VectorRenderer.cs
-│      └── RasterRenderer.cs
-├── CompositePattern/
+│  │  ├── IRenderer.cs
+│  │  ├── VectorRenderer.cs
+│  │  └── RasterRenderer.cs
+├── Composite/
 │  ├── Interfaces/
 │  │  └── IComponent.cs
 │  ├── Leaf/
 │  │  └── File.cs
-│  └── Composite/
-│     └── Folder.cs
-├── DecoratorPattern/
+│  ├── Composite/
+│  │  └── Folder.cs
+├── Decorator/
 │  ├── Components/
 │  │  └── INotifier.cs
 │  ├── ConcreteComponents/
 │  │  └── EmailNotifier.cs
-│  └── Decorators/
-│      └── SMSDecorator.cs
-├── FacadePattern/
+│  ├── Decorators/
+│  │  └── SMSDecorator.cs
+├── Facade/
 │  ├── Subsystems/
 │  │  ├── AudioSystem.cs
 │  │  └── VideoSystem.cs
-│  └── Facade/
-│     └── MediaFacade.cs
-├── FlyweightPattern/
+│  ├── Facade/
+│  │  └── MediaFacade.cs
+├── Flyweight/
 │  ├── Flyweights/
 │  │  └── Character.cs
-│  └── Factory/
-│     └── CharacterFactory.cs
-└── ProxyPattern/
+│  ├── Factory/
+│  │  └── CharacterFactory.cs
+└── Proxy/
 │  ├── Interfaces/
 │  │  └── IImage.cs
 │  ├── RealSubject/
 │  │  └── RealImage.cs
-│  └── Proxy/
-│     └── ImageProxy.cs
+│  ├── Proxy/
+│  │  └── ImageProxy.cs
 │
 ├──DesignPatterns.Demo/
 │  └── Program.cs
