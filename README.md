@@ -230,6 +230,89 @@ DesignPatterns.Structural/
 │  ├── Proxy/
 │  │  └── ImageProxy.cs
 │
+DesignPatterns.Behavioral/
+├── ChainOfResponsibility/
+│  ├── Handlers/
+│  │  ├── Handler.cs
+│  │  ├── AuthenticationHandler.cs
+│  │  ├── LoggingHandler.cs
+│  │  └── ValidationHandler.cs
+├── Command/
+│  ├── Commands/
+│  │  ├── ICommand.cs
+│  │  ├── LightOnCommand.cs
+│  │  └── LightOffCommand.cs
+│  ├── Receivers/
+│  │  └── Light.cs
+│  ├── Invokers/
+│  │  └── RemoteControl.cs
+├── Interpreter/
+│  ├── Expressions/
+│  │  ├── IExpression.cs
+│  │  ├── NumberExpression.cs
+│  │  └── AddExpression.cs
+├── Iterator/
+│   ├── Aggregates/
+│   │   └── NameRepository.cs
+│   ├── Iterators/
+│       ├── IIterator.cs
+│       └── NameIterator.cs
+│ 
+├── Mediator/
+│   ├── Mediators/
+│   │   └── ChatMediator.cs
+│   └── Components/
+│       ├── ChatUser.cs
+│       └── IUser.cs
+│ 
+├── Memento/
+│   ├── Originator/
+│   │   └── TextEditor.cs
+│   ├── Memento/
+│   │   └── EditorMemento.cs
+│   └── Caretaker/
+│       └── History.cs
+│ 
+├── Observer/
+│   ├── Subjects/
+│   │   └── WeatherStation.cs
+│   └── Observers/
+│       ├── IObserver.cs
+│       ├── PhoneDisplay.cs
+│       └── TVDisplay.cs
+│ 
+├── State/
+│   ├── Context/
+│   │   └── Context.cs
+│   └── States/
+│       ├── IState.cs
+│       ├── StartState.cs
+│       └── StopState.cs
+│ 
+├── Strategy/
+│   ├── Strategies/
+│   │   ├── ISortStrategy.cs
+│   │   ├── BubbleSortStrategy.cs
+│   │   └── QuickSortStrategy.cs
+│   └── Context/
+│       └── ContextStrategy.cs
+│ 
+├── TemplateMethod/
+│   ├── Abstract/
+│   │   └── Game.cs
+│   └── Concrete/
+│       ├── Football.cs
+│       └── Chess.cs
+│ 
+├── Visitor/
+│   ├── Elements/
+│   │   ├── IElement.cs
+│   │   ├── Book.cs
+│   │   └── Fruit.cs
+│   └── Visitors/
+│       ├── IVisitor.cs
+│       └── PriceCalculatorVisitor.cs
+
 DesignPatterns.Demo/
 │  └── Program.cs
 </code></pre>
