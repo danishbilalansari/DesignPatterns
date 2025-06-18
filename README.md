@@ -252,67 +252,60 @@ DesignPatterns.Behavioral/
 │  │  ├── NumberExpression.cs
 │  │  └── AddExpression.cs
 ├── Iterator/
-│   ├── Aggregates/
-│   │   └── NameRepository.cs
-│   ├── Iterators/
-│       ├── IIterator.cs
-│       └── NameIterator.cs
-│ 
+│  ├── Aggregates/
+│  │  └── NameRepository.cs
+│  ├── Iterators/
+│  │  ├── IIterator.cs
+│  │  └── NameIterator.cs
 ├── Mediator/
-│   ├── Mediators/
-│   │   └── ChatMediator.cs
-│   └── Components/
-│       ├── ChatUser.cs
-│       └── IUser.cs
-│ 
+│  ├── Mediators/
+│  │  └── ChatMediator.cs
+│  ├── Components/
+│  │  ├── ChatUser.cs
+│  │  └── IUser.cs
 ├── Memento/
-│   ├── Originator/
-│   │   └── TextEditor.cs
-│   ├── Memento/
-│   │   └── EditorMemento.cs
-│   └── Caretaker/
-│       └── History.cs
-│ 
+│  ├── Originator/
+│  │  └── TextEditor.cs
+│  ├── Memento/
+│  │  └── EditorMemento.cs
+│  └── Caretaker/
+│  │  └── History.cs
 ├── Observer/
-│   ├── Subjects/
-│   │   └── WeatherStation.cs
-│   └── Observers/
-│       ├── IObserver.cs
-│       ├── PhoneDisplay.cs
-│       └── TVDisplay.cs
-│ 
+│  ├── Subjects/
+│  │  └── WeatherStation.cs
+│  └── Observers/
+│  │  ├── IObserver.cs
+│  │  ├── PhoneDisplay.cs
+│  │  └── TVDisplay.cs
 ├── State/
-│   ├── Context/
-│   │   └── Context.cs
-│   └── States/
-│       ├── IState.cs
-│       ├── StartState.cs
-│       └── StopState.cs
-│ 
+│  ├── Context/
+│  │  └── Context.cs
+│  └── States/
+│  │  ├── IState.cs
+│  │  ├── StartState.cs
+│  │  └── StopState.cs
 ├── Strategy/
-│   ├── Strategies/
-│   │   ├── ISortStrategy.cs
-│   │   ├── BubbleSortStrategy.cs
-│   │   └── QuickSortStrategy.cs
-│   └── Context/
-│       └── ContextStrategy.cs
-│ 
+│  ├── Strategies/
+│  │  ├── ISortStrategy.cs
+│  │  ├── BubbleSortStrategy.cs
+│  │  └── QuickSortStrategy.cs
+│  ├── Context/
+│  │  └── ContextStrategy.cs
 ├── TemplateMethod/
-│   ├── Abstract/
-│   │   └── Game.cs
-│   └── Concrete/
-│       ├── Football.cs
-│       └── Chess.cs
-│ 
+│  ├── Abstract/
+│  │  └── Game.cs
+│  ├── Concrete/
+│  │  ├── Football.cs
+│  │  └── Chess.cs
 ├── Visitor/
-│   ├── Elements/
-│   │   ├── IElement.cs
-│   │   ├── Book.cs
-│   │   └── Fruit.cs
-│   └── Visitors/
-│       ├── IVisitor.cs
-│       └── PriceCalculatorVisitor.cs
-
+│  ├── Elements/
+│  │  ├── IElement.cs
+│  │  ├── Book.cs
+│  │  └── Fruit.cs
+│  ├── Visitors/
+│  │  ├── IVisitor.cs
+│  │   └── PriceCalculatorVisitor.cs
+│
 DesignPatterns.Demo/
 │  └── Program.cs
 </code></pre>
