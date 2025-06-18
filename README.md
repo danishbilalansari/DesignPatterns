@@ -57,37 +57,89 @@ This repository contains implementations of several core structural design patte
 ### Adapter
 - Converts the interface of a class into another interface clients expect.
 - Allows incompatible interfaces to work together without changing their source code.
-- Example: A `LoggerAdapter` allows integration of an `OldLogger` into a modern logging interface.
+> Example: A `LoggerAdapter` allows integration of an `OldLogger` into a modern logging interface.
 
 ### Bridge
 - Decouples an abstraction from its implementation so the two can vary independently.
 - Useful when both the abstraction and its implementation are expected to change frequently.
-- Example: A `Circle` shape can be rendered using different strategies like `VectorRenderer` or `RasterRenderer`.
+? Example: A `Circle` shape can be rendered using different strategies like `VectorRenderer` or `RasterRenderer`.
 
 ### Composite
 - Composes objects into tree structures to represent part-whole hierarchies.
 - Allows clients to treat individual objects and groups of objects uniformly.
-- Example: A `Folder` can contain both `File` objects and other `Folder` objects, enabling recursive operations.
+? Example: A `Folder` can contain both `File` objects and other `Folder` objects, enabling recursive operations.
 
 ### Decorator
 - Attaches additional responsibilities to an object dynamically.
 - Provides a flexible alternative to subclassing for extending behavior.
-- Example: A `EmailNotifier` can be decorated with an `SMSDecorator` to send both email and SMS notifications.
+> Example: A `EmailNotifier` can be decorated with an `SMSDecorator` to send both email and SMS notifications.
 
 ### Facade
 - Provides a simplified, unified interface to a set of interfaces in a subsystem.
 - Helps reduce complexity and dependencies in client code.
-- Example: A `MediaFacade` abstracts the use of `AudioSystem` and `VideoSystem` into a single `PlayMedia()` method.
+> Example: A `MediaFacade` abstracts the use of `AudioSystem` and `VideoSystem` into a single `PlayMedia()` method.
 
 ### Flyweight
 - Reduces memory usage by sharing common parts of objects that are repeated multiple times.
 - Useful when dealing with a large number of similar objects.
-- Example: A `CharacterFactory` ensures characters like 'A' or 'B' are shared rather than created anew every time.
+> Example: A `CharacterFactory` ensures characters like 'A' or 'B' are shared rather than created anew every time.
 
 ### Proxy
 - Provides a surrogate or placeholder for another object to control access to it.
 - Can add lazy loading, access control, logging, and more.
-- Example: An `ImageProxy` defers loading of a `RealImage` until the image is actually needed.
+> Example: An `ImageProxy` defers loading of a `RealImage` until the image is actually needed.
+
+## Behavioral Design Patterns
+
+Behavioral design patterns focus on the interaction and responsibility between objects. These patterns help ensure that objects communicate in a flexible and maintainable way, reducing tight coupling and improving scalability.
+
+This repository contains implementations of several core behavioral design patterns in C#, including:
+
+## Implemented Patterns
+
+### Strategy
+- Encapsulates interchangeable algorithms or behaviors and selects them at runtime.
+> Example: Sort integers using `BubbleSort` or `QuickSort` dynamically.
+
+### Observer
+- Defines a one-to-many relationship so that when one object changes state, all dependents are notified automatically.
+> Example: A `WeatherStation` notifying `PhoneDisplay` and `TVDisplay`.
+
+### Command
+- Encapsulates requests as objects, allowing parameterization, queuing, and logging of operations.
+> Example: `RemoteControl` triggering `LightOnCommand` and `LightOffCommand`.
+
+### Chain of Responsibility
+- Passes a request along a chain of handlers until one of them handles it.
+> Example: A request passes through `Authentication`, `Logging`, and `Validation` handlers.
+
+### Interpreter
+- Defines a grammar and an interpreter to process that grammar.
+> Example: Arithmetic expression evaluator using nested expression trees.
+
+### Iterator
+- Provides a standard way to access elements of a collection sequentially.
+> Example: A `NameRepository` exposes names using an internal `NameIterator`.
+
+### Mediator
+- Defines an object that centralizes complex communications and control between related objects.
+> Example: `ChatMediator` manages messaging between `ChatUser` instances.
+
+### Memento
+- Captures and restores an object's internal state without violating encapsulation.
+> Example: `TextEditor` saves and restores its content using `EditorMemento`.
+
+### State
+- Allows an object to change its behavior when its internal state changes.
+> Example: `Context` transitions between `StartState` and `StopState`.
+
+### Template Method
+- Defines the structure of an algorithm but lets subclasses redefine specific steps.
+> Example: `Game` base class with `Football` and `Chess` subclasses defining steps.
+
+### Visitor
+- Separates operations from the objects on which they operate.
+> Example: `PriceCalculatorVisitor` visits `Book` and `Fruit` elements to calculate total cost.
 
 ## Project Structure
 
