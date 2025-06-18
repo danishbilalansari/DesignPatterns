@@ -34,7 +34,7 @@ This repository contains implementations of several core creational design patte
 ### Factory Method
 - Defines an interface for creating an object but lets subclasses decide which class to instantiate.
 - Decouples client code from concrete implementations.
-- Example: A `VehicleFactory` creating `Car` or `Bike` objects based on input.
+> Example: A `VehicleFactory` creating `Car` or `Bike` objects based on input.
 
 ### Prototype
 - Creates new objects by copying an existing object (prototype) rather than constructing new instances from scratch.
@@ -62,12 +62,12 @@ This repository contains implementations of several core structural design patte
 ### Bridge
 - Decouples an abstraction from its implementation so the two can vary independently.
 - Useful when both the abstraction and its implementation are expected to change frequently.
-? Example: A `Circle` shape can be rendered using different strategies like `VectorRenderer` or `RasterRenderer`.
+> Example: A `Circle` shape can be rendered using different strategies like `VectorRenderer` or `RasterRenderer`.
 
 ### Composite
 - Composes objects into tree structures to represent part-whole hierarchies.
 - Allows clients to treat individual objects and groups of objects uniformly.
-? Example: A `Folder` can contain both `File` objects and other `Folder` objects, enabling recursive operations.
+> Example: A `Folder` can contain both `File` objects and other `Folder` objects, enabling recursive operations.
 
 ### Decorator
 - Attaches additional responsibilities to an object dynamically.
