@@ -46,6 +46,50 @@ This repository contains implementations of several core creational design patte
 - Thread-safe and lazily initialized.
 - Useful for shared resources like configuration or logging.
 
+## Project Structure - Creational
+
+<pre lang="text"><code>
+DesignPatterns.Creational/
+├── AbstractFactory/
+│  ├── Factories/
+│  │  ├── IGUIFactory.cs
+│  │  ├── MacFactory.cs
+│  │  └── WindowsFactory.cs
+│  ├── Products/  
+│  │  ├── Buttons/
+│  │  │  ├── IButton.cs
+│  │  │  ├── MacButton.cs
+│  │  │  └── WindowsCheckbox.cs
+│  │  ├── Checkboxes/
+│  │  │  ├── ICheckbox.cs
+│  │  │  ├── MacCheckbox.cs
+│  │  │  └── WindowsCheckbox.cs
+├── Builder/
+│  ├── Builders/
+│  │  ├── CarBuilder.cs
+│  │  └── SportsBuilder.cs
+│  ├── Models/
+│  │  └── Car.cs
+├── FactoryMethod/
+│  ├── Interfaces/
+│  │  └── IVehicle.cs
+│  ├── Implementation/
+│  │  ├── Car.cs
+│  │  └── Bike.cs
+│  └── VehicleFactory.cs
+├── Prototype/
+│  ├── Clients/
+│  │  └── Client.cs
+│  ├── Models/
+│  │  ├── ConcreteProduct.cs
+│  │  └── Product.cs
+├── Singleton/
+│  └── Singleton.cs
+│
+DesignPatterns.Demo/
+│  └── Program.cs
+</code></pre>
+
 ## Structural Design Patterns
 
 Structural design patterns focus on how classes and objects are composed to form larger structures, while keeping the system flexible and efficient. These patterns help ensure parts of a system can work together smoothly even as individual components evolve independently.
@@ -88,6 +132,62 @@ This repository contains implementations of several core structural design patte
 - Provides a surrogate or placeholder for another object to control access to it.
 - Can add lazy loading, access control, logging, and more.
 > Example: An `ImageProxy` defers loading of a `RealImage` until the image is actually needed.
+
+## Project Structure - Structural
+
+<pre lang="text"><code>
+DesignPatterns.Structural/
+├── Adapter/
+│  ├── Interfaces/
+│  │  └── INewLogger.cs
+│  ├── Legacy/
+│  │  └── OldLogger.cs
+│  └── Adapters/
+│  │  └── LoggerAdapter.cs
+├── Bridge/
+│  ├── Abstractions/
+│  │  ├── Shape.cs
+│  │  └── Circle.cs
+│  └── Implementations/
+│  │  ├── IRenderer.cs
+│  │  ├── VectorRenderer.cs
+│  │  └── RasterRenderer.cs
+├── Composite/
+│  ├── Interfaces/
+│  │  └── IComponent.cs
+│  ├── Leaf/
+│  │  └── File.cs
+│  ├── Composite/
+│  │  └── Folder.cs
+├── Decorator/
+│  ├── Components/
+│  │  └── INotifier.cs
+│  ├── ConcreteComponents/
+│  │  └── EmailNotifier.cs
+│  ├── Decorators/
+│  │  └── SMSDecorator.cs
+├── Facade/
+│  ├── Subsystems/
+│  │  ├── AudioSystem.cs
+│  │  └── VideoSystem.cs
+│  ├── Facade/
+│  │  └── MediaFacade.cs
+├── Flyweight/
+│  ├── Flyweights/
+│  │  └── Character.cs
+│  ├── Factory/
+│  │  └── CharacterFactory.cs
+├── Proxy/
+│  ├── Interfaces/
+│  │  └── IImage.cs
+│  ├── RealSubject/
+│  │  └── RealImage.cs
+│  ├── Proxy/
+│  │  └── ImageProxy.cs
+│
+DesignPatterns.Demo/
+│  └── Program.cs
+</code></pre>
 
 ## Behavioral Design Patterns
 
@@ -141,95 +241,9 @@ This repository contains implementations of several core behavioral design patte
 - Separates operations from the objects on which they operate.
 > Example: `PriceCalculatorVisitor` visits `Book` and `Fruit` elements to calculate total cost.
 
-## Project Structure
+## Project Structure - Behavioral
 
 <pre lang="text"><code>
-DesignPatterns.Creational/
-├── AbstractFactory/
-│  ├── Factories/
-│  │  ├── IGUIFactory.cs
-│  │  ├── MacFactory.cs
-│  │  └── WindowsFactory.cs
-│  ├── Products/  
-│  │  ├── Buttons/
-│  │  │  ├── IButton.cs
-│  │  │  ├── MacButton.cs
-│  │  │  └── WindowsCheckbox.cs
-│  │  ├── Checkboxes/
-│  │  │  ├── ICheckbox.cs
-│  │  │  ├── MacCheckbox.cs
-│  │  │  └── WindowsCheckbox.cs
-├── Builder/
-│  ├── Builders/
-│  │  ├── CarBuilder.cs
-│  │  └── SportsBuilder.cs
-│  ├── Models/
-│  │  └── Car.cs
-├── FactoryMethod/
-│  ├── Interfaces/
-│  │  └── IVehicle.cs
-│  ├── Implementation/
-│  │  ├── Car.cs
-│  │  └── Bike.cs
-│  └── VehicleFactory.cs
-├── Prototype/
-│  ├── Clients/
-│  │  └── Client.cs
-│  ├── Models/
-│  │  ├── ConcreteProduct.cs
-│  │  └── Product.cs
-├── Singleton/
-│  └── Singleton.cs
-│
-DesignPatterns.Structural/
-├── Adapter/
-│  ├── Interfaces/
-│  │  └── INewLogger.cs
-│  ├── Legacy/
-│  │  └── OldLogger.cs
-│  └── Adapters/
-│  │  └── LoggerAdapter.cs
-├── Bridge/
-│  ├── Abstractions/
-│  │  ├── Shape.cs
-│  │  └── Circle.cs
-│  └── Implementations/
-│  │  ├── IRenderer.cs
-│  │  ├── VectorRenderer.cs
-│  │  └── RasterRenderer.cs
-├── Composite/
-│  ├── Interfaces/
-│  │  └── IComponent.cs
-│  ├── Leaf/
-│  │  └── File.cs
-│  ├── Composite/
-│  │  └── Folder.cs
-├── Decorator/
-│  ├── Components/
-│  │  └── INotifier.cs
-│  ├── ConcreteComponents/
-│  │  └── EmailNotifier.cs
-│  ├── Decorators/
-│  │  └── SMSDecorator.cs
-├── Facade/
-│  ├── Subsystems/
-│  │  ├── AudioSystem.cs
-│  │  └── VideoSystem.cs
-│  ├── Facade/
-│  │  └── MediaFacade.cs
-├── Flyweight/
-│  ├── Flyweights/
-│  │  └── Character.cs
-│  ├── Factory/
-│  │  └── CharacterFactory.cs
-├── Proxy/
-│  ├── Interfaces/
-│  │  └── IImage.cs
-│  ├── RealSubject/
-│  │  └── RealImage.cs
-│  ├── Proxy/
-│  │  └── ImageProxy.cs
-│
 DesignPatterns.Behavioral/
 ├── ChainOfResponsibility/
 │  ├── Handlers/
