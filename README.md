@@ -366,8 +366,7 @@ DesignPatterns.Tests/
 </code></pre>
 
 - Each pattern has its corresponding file that contains focused unit tests for its components and flow.
-- Additionally, a shared BaseTest.cs file is available for common setup logic, mock objects, and reusable assertions.
-- **BaseTest** is an abstract test base class that ensures all derived tests run sequentially by assigning them to a non-parallel xUnit collection. This prevents shared resource conflicts and race conditions during test execution.
+- Additionally, a shared **BaseTest.cs** file is an abstract test base class that ensures all derived tests run sequentially by assigning them to a non-parallel xUnit collection. This prevents shared resource conflicts and race conditions during test execution.
 
 ## Purpose of Tests
 - **Verify behavior:** Ensure the design pattern behaves correctly in isolation.
