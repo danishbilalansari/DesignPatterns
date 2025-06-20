@@ -3,8 +3,14 @@ using DesignPatterns.Structural.Decorator.Decorators;
 
 namespace DesignPatterns.Tests.Structural;
 
+/// <summary>
+/// DecoratorTests class. Contains tests for the Decorator design pattern implementation.
+/// </summary>
 public class DecoratorTests : BaseTest
 {
+    /// <summary>
+    /// Verifies that SMSDecorator adds SMS notification to the base EmailNotifier.
+    /// </summary>
     [Fact]
     public void SMSDecorator_Should_Add_SMS_Notification_To_Email()
     {

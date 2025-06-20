@@ -2,12 +2,18 @@ using DesignPatterns.Behavioral.Mediator.Concrete;
 
 namespace DesignPatterns.Tests.Behavioral;
 
+/// <summary>
+/// MediatorTests class. Contains tests for the Mediator design pattern implementation.
+/// </summary>
 public class MediatorTests : BaseTest
 {
+    /// <summary>
+    /// Verifies that a message sent by one user is received by all other users in the chat.
+    /// </summary>
     [Fact]
     public void SendMessage_Should_Be_Received_By_Other_Users()
     {
-        // Arrange
+        // Arrange: Set up the mediator and users
         var mediator = new ChatMediator();
         var user1 = new User("User1", mediator);
         var user2 = new User("User2", mediator);
@@ -31,10 +37,10 @@ public class MediatorTests : BaseTest
 
         try
         {
-            // Act
+            // Act: User1 sends a message
             user1.Send(message);
 
-            // Assert
+            // Assert: All other users should receive the message
             sw.Flush();
             var output = sw.ToString();
             foreach (var line in expectedLines)

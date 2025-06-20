@@ -4,8 +4,14 @@ using DesignPatterns.Creational.AbstractFactory.Products.Checkboxes;
 
 namespace DesignPatterns.Tests.Creational;
 
+/// <summary>
+/// AbstractFactoryTests class. Contains tests for the Abstract Factory design pattern implementation.
+/// </summary>
 public class AbstractFactoryTests : BaseTest
 {
+    /// <summary>
+    /// Verifies that MacFactory creates MacButton and MacCheckbox, and WindowsFactory creates WindowsButton and WindowsCheckbox.
+    /// </summary>
     [Fact]
     public void WindowsFactory_Should_Create_Windows_Components()
     {
@@ -23,6 +29,9 @@ public class AbstractFactoryTests : BaseTest
         Assert.IsType<WindowsCheckbox>(checkbox);
     }
 
+    /// <summary>
+    /// Verifies that MacFactory creates MacButton and MacCheckbox.
+    /// </summary>
     [Fact]
     public void MacFactory_Should_Create_Mac_Components()
     {

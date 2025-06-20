@@ -3,12 +3,18 @@ using DesignPatterns.Behavioral.TemplateMethod.Concrete;
 
 namespace DesignPatterns.Tests.Behavioral;
 
+/// <summary>
+/// TemplateMethodTests class. Contains tests for the Template Method design pattern implementation.
+/// </summary>
 public class TemplateMethodTests : BaseTest
 {
+    /// <summary>
+    /// Verifies that the Chess game follows the correct sequence of operations.
+    /// </summary>
     [Fact]
     public void Play_Should_Follow_Correct_Sequence_For_Chess()
     {
-        // Arrange
+        // Arrange: Create a Chess game
         Game chess = new Chess();
         var expectedLines = new[]
         {
@@ -23,10 +29,10 @@ public class TemplateMethodTests : BaseTest
 
         try
         {
-            // Act
+            // Act: Play the game
             chess.Play();
 
-            // Assert
+            // Assert: The output should follow the correct sequence
             sw.Flush();
             var output = sw.ToString();
             foreach (var line in expectedLines)
@@ -40,10 +46,13 @@ public class TemplateMethodTests : BaseTest
         }
     }
 
+    /// <summary>
+    /// Verifies that the Football game follows the correct sequence of operations.
+    /// </summary>
     [Fact]
     public void Play_Should_Follow_Correct_Sequence_For_Football()
     {
-        // Arrange
+        // Arrange: Create a Football game
         Game football = new Football();
         var expectedLines = new[]
         {
@@ -58,10 +67,10 @@ public class TemplateMethodTests : BaseTest
 
         try
         {
-            // Act
+            // Act: Play the game
             football.Play();
 
-            // Assert
+            // Assert: The output should follow the correct sequence
             sw.Flush();
             var output = sw.ToString();
             foreach (var line in expectedLines)

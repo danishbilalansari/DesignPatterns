@@ -3,12 +3,18 @@ using DesignPatterns.Behavioral.Observer.Subjects;
 
 namespace DesignPatterns.Tests.Behavioral;
 
+/// <summary>
+/// ObserverTests class. Contains tests for the Observer design pattern implementation.
+/// </summary>
 public class ObserverTests : BaseTest
 {
+    /// <summary>
+    /// Verifies that all registered observers are notified when the subject's state changes.
+    /// </summary>
     [Fact]
     public void SetTemperature_Should_Notify_All_Registered_Observers()
     {
-        // Arrange
+        // Arrange: Set up the subject and observers
         var weatherStation = new WeatherStation();
         var phoneDisplay = new PhoneDisplay();
         var windowDisplay = new WindowDisplay();
@@ -28,10 +34,10 @@ public class ObserverTests : BaseTest
         
         try
         {
-            // Act
+            // Act: Change the temperature
             weatherStation.SetTemperature(25.5f);
             
-            // Assert
+            // Assert: All observers should be notified
             sw.Flush();
             var output = sw.ToString();
             foreach (var line in expectedLines)

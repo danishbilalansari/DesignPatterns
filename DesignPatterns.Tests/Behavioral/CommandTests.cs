@@ -4,12 +4,18 @@ using DesignPatterns.Behavioral.Command.Receiver;
 
 namespace DesignPatterns.Tests.Behavioral;
 
+/// <summary>
+/// CommandTests class. Contains tests for the Command design pattern implementation.
+/// </summary>
 public class CommandTests : BaseTest
 {
+    /// <summary>
+    /// Verifies that pressing the button executes the LightOnCommand and turns the light on.
+    /// </summary>
     [Fact]
     public void PressButton_Should_Execute_LightOnCommand()
     {
-        // Arrange
+        // Arrange: Set up the light, command, and remote control
         var light = new Light();
         var lightOnCommand = new LightOnCommand(light);
         var remote = new RemoteControl();
@@ -22,10 +28,10 @@ public class CommandTests : BaseTest
 
         try
         {
-            // Act
+            // Act: Press the button
             remote.PressButton();
 
-            // Assert
+            // Assert: The output should indicate the light is on
             sw.Flush();
             Assert.Contains(expected, sw.ToString());
         }
@@ -35,10 +41,13 @@ public class CommandTests : BaseTest
         }
     }
 
+    /// <summary>
+    /// Verifies that pressing the button executes the LightOffCommand and turns the light off.
+    /// </summary>
     [Fact]
     public void PressButton_Should_Execute_LightOffCommand()
     {
-        // Arrange
+        // Arrange: Set up the light, command, and remote control
         var light = new Light();
         var lightOffCommand = new LightOffCommand(light);
         var remote = new RemoteControl();
@@ -51,10 +60,10 @@ public class CommandTests : BaseTest
 
         try
         {
-            // Act
+            // Act: Press the button
             remote.PressButton();
 
-            // Assert
+            // Assert: The output should indicate the light is off
             sw.Flush();
             Assert.Contains(expected, sw.ToString());
         }

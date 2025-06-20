@@ -2,12 +2,18 @@ using DesignPatterns.Structural.Facade.Facade;
 
 namespace DesignPatterns.Tests.Structural;
 
+/// <summary>
+/// FacadeTests class. Contains tests for the Facade design pattern implementation.
+/// </summary>
 public class FacadeTests : BaseTest
 {
+    /// <summary>
+    /// Verifies that the MediaFacade calls both audio and video subsystems.
+    /// </summary>
     [Fact]
     public void PlayMedia_Should_Call_Audio_And_Video_Subsystems()
     {
-        // Arrange
+        // Arrange: Create the facade
         var facade = new MediaFacade();
         
         var expectedLines = new[]
@@ -22,10 +28,10 @@ public class FacadeTests : BaseTest
         
         try
         {
-            // Act
+            // Act: Play media
             facade.PlayMedia();
 
-            // Assert
+            // Assert: The output should include both video and audio messages
             sw.Flush();
             var output = sw.ToString();
             foreach (var line in expectedLines)
