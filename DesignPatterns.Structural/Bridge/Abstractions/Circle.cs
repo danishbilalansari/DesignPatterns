@@ -2,6 +2,9 @@
 
 namespace DesignPatterns.Structural.Bridge.Abstractions;
 
+/// <summary>
+/// Circle class. Concrete shape abstraction.
+/// </summary>
 public class Circle : Shape
 {
     private readonly float _radius;
@@ -11,6 +14,9 @@ public class Circle : Shape
         _radius = radius;
     }
 
+    /// <summary>
+    /// Draws the circle using the renderer.
+    /// </summary>
     public override void Draw()
     {
         renderer.RenderCircle(_radius);

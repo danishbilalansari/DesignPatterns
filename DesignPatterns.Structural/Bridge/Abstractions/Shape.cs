@@ -2,6 +2,9 @@ using DesignPatterns.Structural.Bridge.Implementations;
 
 namespace DesignPatterns.Structural.Bridge.Abstractions;
 
+/// <summary>
+/// Shape abstract class. Bridge abstraction for shapes.
+/// </summary>
 public abstract class Shape
 {
     protected IRenderer renderer;
@@ -11,5 +14,8 @@ public abstract class Shape
         this.renderer = renderer;
     }
 
+    /// <summary>
+    /// Draws the shape using the renderer.
+    /// </summary>
     public abstract void Draw();
 }
