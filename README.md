@@ -324,6 +324,43 @@ DesignPatterns.Demo/
 │  └── Program.cs
 </code></pre>
 
+
+## Unit Tests
+
+<pre lang="text"><code>
+DesignPatterns.Tests/
+├── Behavioral/
+│   ├── ChainOfResponsibilityTests.cs
+│   ├── CommandTests.cs
+│   ├── InterpreterTests.cs
+│   ├── IteratorTests.cs
+│   ├── MediatorTests.cs
+│   ├── MementoTests.cs
+│   ├── ObserverTests.cs
+│   ├── StateTests.cs
+│   ├── StrategyTests.cs
+│   ├── TemplateMethodTests.cs
+│   └── VisitorTests.cs
+│ 
+├── Creational/
+│   ├── AbstractFactoryTests.cs
+│   ├── BuilderTests.cs
+│   ├── FactoryMethodTests.cs
+│   ├── PrototypeTests.cs
+│   └── SingletonTests.cs
+│ 
+├── Structural/
+│   ├── AdapterTests.cs
+│   ├── BridgeTests.cs
+│   ├── CompositeTests.cs
+│   ├── DecoratorTests.cs
+│   ├── FacadeTests.cs
+│   ├── FlyweightTests.cs
+│   └── ProxyTests.cs
+│ 
+├── BaseTest.cs
+</code></pre>
+
 <!--
 ## Usage
 
