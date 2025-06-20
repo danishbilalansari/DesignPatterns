@@ -325,7 +325,11 @@ DesignPatterns.Demo/
 </code></pre>
 
 
-## Unit Tests
+## Design Patterns - Unit Tests
+
+The DesignPatterns.Tests project contains comprehensive unit tests for all implemented Creational, Structural, and Behavioral design patterns in the solution. These tests ensure each pattern behaves as expected under various scenarios and validates their adherence to the design principles they're meant to demonstrate.
+
+## Project Structure - Tests
 
 <pre lang="text"><code>
 DesignPatterns.Tests/
@@ -360,6 +364,16 @@ DesignPatterns.Tests/
 │ 
 ├── BaseTest.cs
 </code></pre>
+
+- Each pattern has its corresponding file that contains focused unit tests for its components and flow.
+- Additionally, a shared BaseTest.cs file is available for common setup logic, mock objects, and reusable assertions.
+- **BaseTest** is an abstract test base class that ensures all derived tests run sequentially by assigning them to a non-parallel xUnit collection. This prevents shared resource conflicts and race conditions during test execution.
+
+## Purpose of Tests
+- **Verify behavior:** Ensure the design pattern behaves correctly in isolation.
+- **Validate interactions:** Especially for behavioral patterns like Observer, Command, Mediator, and Strategy, which involve multiple components interacting.
+- **Catch regressions:** Quickly identify when changes break expected behavior.
+- **Educate:** Provide executable examples of how each pattern works in a real-world scenario.
 
 <!--
 ## Usage
